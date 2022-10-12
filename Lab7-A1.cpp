@@ -19,39 +19,43 @@ int main(void) {
 		drunk = numdrunk;
 		cout << "Drunkard #" << drunk;
 
-		
+
 		for (int m = 0; m <= 8; m++) {
 			movement = rand() % 9;
 		}
 
-		//generate location of x coordinate
-		if (movement == 3 || movement == 7) {
+		//generate location of x and y coordinate
+		if (movement == 3) {
 			x = 0;
+			y++;
 		}
-		if (movement == 4 || movement == 5 || movement == 8) {
-			for (int i = 0; i <= 20; i++) {
-				x = rand() % 21;
-			}
+		if (movement == 7) {
+			x = 0;
+			y--;
 		}
-		if (movement == 1 || movement == 2 || movement == 6) {
-			for (int i = 0; i >= -20; i--) {
-				x = (-1) * (rand() % 21);
-			}
+		if (movement == 4) { 
+			x++;
+			y++;
 		}
-
-		// generate location of y coordinate
-		if (movement == 1 || movement == 5) {
+		if (movement == 5) {
+			x++;
 			y = 0;
 		}
-		if (movement == 2 || movement == 3 || movement == 4) {
-			for (int j = 0; j <= 20; j++) {
-				y = rand() % 21;
-			}
+		if (movement == 8) {
+			x++;
+			y--;
 		}
-		if (movement == 6 || movement == 7 || movement == 8) {
-			for (int j = 0; j >= -20; j--) {
-				y = (-1) * (rand() % 21);
-			}
+		if (movement == 1) {
+			x--;
+			y = 0;
+		}
+		if (movement == 2) {
+			x--;
+			y++;
+		}
+		if (movement == 6) {
+			x--;
+			y--;
 		}
 		else if (movement == 0) {
 			x = 0;
