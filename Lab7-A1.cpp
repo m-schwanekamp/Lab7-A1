@@ -12,7 +12,6 @@ int main(void) {
 	int numdrunk = 0;
 	int x = 0;
 	int y = 0;
-	int seconds = 120;
 
 	srand(time(0));
 	while (drunk < 10) {
@@ -59,8 +58,8 @@ int main(void) {
 					x += 0;
 					y += 0;
 				}
-				cout << " finished at location (" << x << ", " << y << ")" << endl;
 			}
 		}
+		cout << " finished at location (" << x << ", " << y << ")" << endl;
 	}
 }
